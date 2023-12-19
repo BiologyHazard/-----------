@@ -1,28 +1,31 @@
+import logging
 import math
 import random
 import statistics
-import sys
+# import sys
 from collections.abc import Callable
 from typing import NamedTuple, Self, Sequence
 
+# from loguru import logger
 import yaml
-from loguru import logger
 
-default_format: str = (
-    "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> "
-    "[<level>{level}</level>] "
-    # "<cyan><underline>{name}</underline></cyan>:"
-    # "<cyan>{function}</cyan>:<cyan>{line}</cyan> | "
-    "<level><normal>{message}</normal></level>"
-    # "<level>{message}</level>"
-)
+# default_format: str = (
+#     "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> "
+#     "[<level>{level}</level>] "
+#     # "<cyan><underline>{name}</underline></cyan>:"
+#     # "<cyan>{function}</cyan>:<cyan>{line}</cyan> | "
+#     "<level><normal>{message}</normal></level>"
+#     # "<level>{message}</level>"
+# )
 
-logger.remove()
-logger_id: int = logger.add(
-    sys.stderr,
-    level="INFO",
-    format=default_format,
-)
+# logger.remove()
+# logger_id: int = logger.add(
+#     sys.stderr,
+#     level="INFO",
+#     format=default_format,
+# )
+
+logger = logging.getLogger(__name__)
 
 
 def linear_interpolation(x0, x1, /, t):
