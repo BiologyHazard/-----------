@@ -218,7 +218,7 @@ def parse_percentage(s: str | float | int) -> float:
 
 
 def main():
-    with open('示例 153.yaml', 'r', encoding='utf-8') as fp:
+    with open('数据.yaml', 'r', encoding='utf-8') as fp:
         data = yaml.safe_load(fp)
 
     模拟次数: int = data['模拟次数']
